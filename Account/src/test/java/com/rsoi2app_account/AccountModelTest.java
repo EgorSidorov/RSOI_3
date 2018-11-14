@@ -155,7 +155,7 @@ public class AccountModelTest {
 
     @Test
     public void GetRole() throws Exception {
-        /*AccountModel model;
+        AccountModel model;
         if(Startup.isDbTest())
             model = new AccountModel();
         else
@@ -164,9 +164,10 @@ public class AccountModelTest {
             model.resObj = Mockito.mock(ResultSet.class);
             Mockito.when(model.RequestDB("SELECT Name_Role FROM Account.Roles rl JOIN Account.Info inf ON(inf.Role = rl.ID_Role) WHERE inf.Cookie=test_token",true)).thenReturn(null);
             Mockito.when(model.resObj.next()).thenReturn(true).thenReturn(false);
-            Mockito.when(model.resObj.getString("Name_Role")).thenReturn("master");*/
+            Mockito.when(model.resObj.getString("Name_Role")).thenReturn("master");
         }
-        //Assert.assertEquals("master",model.GetRole("test_token"));
+        String token = model.Login("Egor6","qwerty");
+        //Assert.assertEquals("master",model.GetRole(token));
     }
 
     @Test
