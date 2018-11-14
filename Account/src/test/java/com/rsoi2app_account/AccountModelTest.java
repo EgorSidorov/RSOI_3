@@ -155,12 +155,12 @@ public class AccountModelTest {
 
     @Test
     public void GetRole() throws Exception {
-        AccountModel model;
+        /*AccountModel model;
         if(Startup.isDbTest())
             model = new AccountModel();
         else
         {
-            /*model = Mockito.spy(new AccountModel());
+            model = Mockito.spy(new AccountModel());
             model.resObj = Mockito.mock(ResultSet.class);
             Mockito.when(model.RequestDB("SELECT Name_Role FROM Account.Roles rl JOIN Account.Info inf ON(inf.Role = rl.ID_Role) WHERE inf.Cookie=test_token",true)).thenReturn(null);
             Mockito.when(model.resObj.next()).thenReturn(true).thenReturn(false);
