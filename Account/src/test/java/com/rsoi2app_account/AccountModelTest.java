@@ -166,8 +166,7 @@ public class AccountModelTest {
             Mockito.when(model.resObj.next()).thenReturn(true).thenReturn(false);
             Mockito.when(model.resObj.getString("Name_Role")).thenReturn("master");
         }
-        String token = model.Login("Egor6","qwerty");
-        //Assert.assertEquals("master",model.GetRole(token));
+        Assert.assertEquals("master",model.GetRole("test_token"));
     }
 
     @Test
